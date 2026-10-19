@@ -35,6 +35,7 @@ Toda arte e toda legenda seguem estas regras. Na dúvida, não publique: avise o
 ## Formato
 - **12h — post de feed** (1080×1350) com legenda.
 - **19h — story** (1080×1920), sem legenda.
+- **Story de aviso**: todo post de feed ganha um story 5 minutos depois avisando que tem post novo (kicker "NOVO POST", título "Tem post novo / *no feed!*", lead = título do post, texto curto com o tema + "Confira o post completo no nosso perfil.", cta "Confira no nosso perfil"). No HISTORICO.md o formato é `story-aviso` (não conta como o story das 19h).
 - Título: 2 ou 3 linhas curtas (até ~18 caracteres por linha no story e ~22 no feed). A última linha leva `*` no início para ficar em destaque.
 - Listas: 3 a 5 itens de até ~34 caracteres. Parágrafo do layout "texto": até ~220 caracteres.
 - `cta` padrão: "Procure o posto de saúde da sua cidade". `nota` padrão: "O agendamento é feito pela Secretaria Municipal de Saúde." (ou "Atendimento pelo SUS, sem custo, nos municípios parceiros.").
