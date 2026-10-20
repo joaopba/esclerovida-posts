@@ -1,0 +1,16 @@
+{
+  "formato": "story",
+  "layout": "lista",
+  "kicker": "FIQUE ATENTO",
+  "titulo": ["Sinais de alerta", "*nas pernas*"],
+  "itens": [
+    "Peso e cansaço nas pernas",
+    "Inchaço no fim do dia",
+    "Câimbras à noite",
+    "Veias dilatadas e tortuosas",
+    "Feridas que não cicatrizam"
+  ],
+  "destaque": "Reconhecer cedo muda o tratamento.",
+  "cta": "Procure o posto de saúde da sua cidade",
+  "nota": "O agendamento é feito pela Secretaria Municipal de Saúde."
+}
