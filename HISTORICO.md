@@ -7,3 +7,4 @@
 | 2026-10-19 | 12:55 | story-aviso | P01 | Tem post novo no feed: Afinal, o que são varizes? | stories/2026-10-19-1205-aviso-o-que-sao-varizes.jpg | 400185904 |
 | 2026-10-20 | 12:00 | feed | P03 | Como ser atendido pelo SUS? | feed/2026-10-20-1200-como-ser-atendido.jpg | 401174234 |
 | 2026-10-20 | 12:05 | story-aviso | P03 | Tem post novo no feed: Como ser atendido pelo SUS? | stories/2026-10-20-1205-aviso-como-ser-atendido.jpg | 401174719 |
+| 2026-10-20 | 13:40 | story | P02 | Sinais de alerta nas pernas | stories/2026-10-20-1340-sinais-de-alerta.jpg | 401298321 |
