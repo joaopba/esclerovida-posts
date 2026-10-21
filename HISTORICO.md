@@ -8,3 +8,5 @@
 | 2026-10-20 | 12:00 | feed | P03 | Como ser atendido pelo SUS? | feed/2026-10-20-1200-como-ser-atendido.jpg | 401174234 |
 | 2026-10-20 | 12:05 | story-aviso | P03 | Tem post novo no feed: Como ser atendido pelo SUS? | stories/2026-10-20-1205-aviso-como-ser-atendido.jpg | 401174719 |
 | 2026-10-20 | 13:40 | story | P02 | Sinais de alerta nas pernas | stories/2026-10-20-1340-sinais-de-alerta.jpg | 401298321 |
+| 2026-10-21 | 13:43 | feed | P04 | O que aumenta o risco de varizes? | feed/2026-10-21-1200-fatores-de-risco.jpg | 402330691 |
+| 2026-10-21 | 13:48 | story-aviso | P04 | Tem post novo no feed: O que aumenta o risco de varizes? | stories/2026-10-21-1205-aviso-fatores-de-risco.jpg | 402330710 |
