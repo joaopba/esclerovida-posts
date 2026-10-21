@@ -1,0 +1,15 @@
+{
+  "formato": "feed",
+  "layout": "lista",
+  "kicker": "FIQUE ATENTO",
+  "titulo": ["O que aumenta o", "*risco de varizes?*"],
+  "itens": [
+    "Histórico familiar de varizes",
+    "Muito tempo em pé ou sentado",
+    "Gestação",
+    "Sobrepeso e sedentarismo",
+    "Mais comum com o passar dos anos"
+  ],
+  "cta": "Envie para alguém da família",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
