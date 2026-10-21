@@ -38,8 +38,28 @@ Toda arte e toda legenda seguem estas regras. Na dúvida, não publique: avise o
 - **Story de aviso**: todo post de feed ganha um story 5 minutos depois avisando que tem post novo (kicker "NOVO POST", título "Tem post novo / *no feed!*", lead = título do post, texto curto com o tema + "Confira o post completo no nosso perfil.", cta "Confira no nosso perfil"). No HISTORICO.md o formato é `story-aviso` (não conta como o story das 19h).
 - Título: 2 ou 3 linhas curtas (até ~18 caracteres por linha no story e ~22 no feed). A última linha leva `*` no início para ficar em destaque.
 - Listas: 3 a 5 itens de até ~34 caracteres. Parágrafo do layout "texto": até ~220 caracteres.
-- `cta` padrão: "Procure o posto de saúde da sua cidade". `nota` padrão: "O agendamento é feito pela Secretaria Municipal de Saúde." (ou "Atendimento pelo SUS, sem custo, nos municípios parceiros.").
+- `nota` padrão: "O agendamento é feito pela Secretaria Municipal de Saúde." (ou "Atendimento pelo SUS, sem custo, nos municípios parceiros.").
 - Legenda do feed: 500 a 1.000 caracteres, parágrafos curtos, até 3 emojis, a linha do RT e 6 a 10 hashtags entre: #varizes #saudevascular #circulacao #SUS #saudedaspernas #BarraDoChoca #BomJesusDaSerra #Cacule #Itororo #PlanaltoBA #Bahia
+
+## CTA e engajamento
+O objetivo é fazer o post circular (salvar, compartilhar, marcar, comentar) sem nunca virar consulta.
+
+**CTA da arte (`cta`, até ~34 caracteres), conforme o tema:**
+- Sinais, sintomas, feridas ou atendimento (pilar D, P02, P13, P16, P19, P29): o `cta` é sempre "Procure o posto de saúde da sua cidade". O engajamento vai só na legenda.
+- Hábitos (pilar B): compartilhar com quem precisa. Ex.: "Envie para quem passa o dia em pé", "Envie para quem trabalha sentado", "Salve e coloque em prática".
+- Mito ou verdade (pilar C): convite a opinar. Ex.: "Você acreditava nisso? Comente", "Envie para quem ainda acredita".
+- Entender as varizes (pilar A, exceto sintomas): "Salve para não esquecer", "Envie para alguém da família".
+- Onde estamos/cidades: "Marque alguém da sua cidade".
+- Nesses casos de engajamento, a `nota` traz o caminho do SUS ("O atendimento começa no posto de saúde da sua cidade." ou a nota padrão).
+- **Story** não tem comentários: use só "Envie para ..." ou "Compartilhe com ...". Não peça resposta ao story nem direct.
+- Não repita o mesmo `cta` de engajamento do post anterior do mesmo formato.
+
+**Legenda do feed:**
+- 1ª linha = gancho: uma pergunta ou frase curta que faça parar de rolar (ex.: "Sente as pernas pesadas no fim do dia?", "Você já ouviu que cruzar as pernas causa varizes?").
+- Antes da linha do RT, um parágrafo de engajamento com **uma** ação principal, variando entre: salvar ("Salve este post para consultar depois"), compartilhar/marcar ("Marque alguém que precisa saber disso", "Marque alguém de Caculé, Itororó..."), ou opinar ("Você já sabia disso? Responda SIM ou NÃO nos comentários", "MITO ou VERDADE: o que você achava? Comente").
+- Logo depois, o caminho do SUS em uma frase: "Para avaliação, procure o posto de saúde da sua cidade."
+
+**Nunca:** pedir que a pessoa conte sintomas, doenças ou fotos das pernas nos comentários; prometer responder dúvidas individuais ("comente sua dúvida que o médico responde"); convidar para direct, WhatsApp ou telefone; sorteios, brindes ou "comente para ganhar"; pressão ou medo ("não espere piorar!", "corra").
 
 ## Conferência antes de publicar
 1. `python3 gerador/render.py pauta.json arte.jpg --legenda legenda.txt` (feed) ou sem `--legenda` (story). O script recusa termos proibidos, legenda sem a linha do RT e texto que não cabe.
