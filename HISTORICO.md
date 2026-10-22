@@ -11,3 +11,5 @@
 | 2026-10-21 | 13:43 | feed | P04 | O que aumenta o risco de varizes? | feed/2026-10-21-1200-fatores-de-risco.jpg | 402330691 |
 | 2026-10-21 | 13:48 | story-aviso | P04 | Tem post novo no feed: O que aumenta o risco de varizes? | stories/2026-10-21-1205-aviso-fatores-de-risco.jpg | 402330710 |
 | 2026-10-21 | 19:00 | story | P06 | Sem internação, na sua cidade | stories/2026-10-21-1900-sem-internacao.jpg | 402331583 |
+| 2026-10-22 | 12:00 | feed | P07 | Caminhar ajuda a circulação | feed/2026-10-22-1200-caminhar-circulacao.jpg | 403226847 |
+| 2026-10-22 | 12:05 | story-aviso | P07 | Tem post novo no feed: Caminhar ajuda a circulação | stories/2026-10-22-1205-aviso-caminhar-circulacao.jpg | 403226925 |
