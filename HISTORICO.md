@@ -13,3 +13,4 @@
 | 2026-10-21 | 19:00 | story | P06 | Sem internação, na sua cidade | stories/2026-10-21-1900-sem-internacao.jpg | 402331583 |
 | 2026-10-22 | 12:00 | feed | P07 | Caminhar ajuda a circulação | feed/2026-10-22-1200-caminhar-circulacao.jpg | 403226847 |
 | 2026-10-22 | 12:05 | story-aviso | P07 | Tem post novo no feed: Caminhar ajuda a circulação | stories/2026-10-22-1205-aviso-caminhar-circulacao.jpg | 403226925 |
+| 2026-10-22 | 19:00 | story | P16 | Manchas escuras nas pernas? | stories/2026-10-22-1900-manchas-escuras.jpg | 403598715 |
