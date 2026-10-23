@@ -14,3 +14,5 @@
 | 2026-10-22 | 12:00 | feed | P07 | Caminhar ajuda a circulação | feed/2026-10-22-1200-caminhar-circulacao.jpg | 403226847 |
 | 2026-10-22 | 12:05 | story-aviso | P07 | Tem post novo no feed: Caminhar ajuda a circulação | stories/2026-10-22-1205-aviso-caminhar-circulacao.jpg | 403226925 |
 | 2026-10-22 | 19:00 | story | P16 | Manchas escuras nas pernas? | stories/2026-10-22-1900-manchas-escuras.jpg | 403598715 |
+| 2026-10-23 | 12:00 | feed | P09 | Cruzar as pernas causa varizes? | feed/2026-10-23-1200-cruzar-as-pernas.jpg | 404238772 |
+| 2026-10-23 | 12:05 | story-aviso | P09 | Tem post novo no feed: Cruzar as pernas causa varizes? | stories/2026-10-23-1205-aviso-cruzar-as-pernas.jpg | 404238802 |
