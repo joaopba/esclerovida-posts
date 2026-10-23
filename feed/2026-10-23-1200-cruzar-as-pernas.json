@@ -1,0 +1,10 @@
+{
+  "formato": "feed",
+  "layout": "mito_verdade",
+  "kicker": "MITO OU VERDADE?",
+  "titulo": ["Cruzar as pernas", "*causa varizes?*"],
+  "mito": "Cruzar as pernas causa varizes.",
+  "verdade": "Não há evidência de que cruzar as pernas cause varizes. Histórico familiar e passar muito tempo parado pesam muito mais.",
+  "cta": "Você acreditava nisso? Comente",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
