@@ -1,0 +1,14 @@
+{
+  "formato": "story",
+  "layout": "lista",
+  "kicker": "CUIDE DAS PERNAS",
+  "titulo": ["Trabalha muito", "*tempo em pé?*"],
+  "itens": [
+    "Faça pausas para caminhar",
+    "Movimente os pés: ponta e calcanhar",
+    "Eleve as pernas quando puder",
+    "Fique atento aos sinais de alerta"
+  ],
+  "cta": "Envie para quem passa o dia em pé",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
