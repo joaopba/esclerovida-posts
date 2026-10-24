@@ -17,3 +17,5 @@
 | 2026-10-23 | 12:00 | feed | P09 | Cruzar as pernas causa varizes? | feed/2026-10-23-1200-cruzar-as-pernas.jpg | 404238772 |
 | 2026-10-23 | 12:05 | story-aviso | P09 | Tem post novo no feed: Cruzar as pernas causa varizes? | stories/2026-10-23-1205-aviso-cruzar-as-pernas.jpg | 404238802 |
 | 2026-10-23 | 19:00 | story | P11 | Trabalha muito tempo em pé? | stories/2026-10-23-1900-trabalha-em-pe.jpg | 404586194 |
+| 2026-10-24 | 12:00 | feed | P10 | Pernas inchadas no fim do dia? | feed/2026-10-24-1200-pernas-inchadas.jpg | 405039458 |
+| 2026-10-24 | 12:05 | story-aviso | P10 | Tem post novo no feed: Pernas inchadas no fim do dia? | stories/2026-10-24-1205-aviso-pernas-inchadas.jpg | 405039741 |
