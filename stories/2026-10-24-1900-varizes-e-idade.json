@@ -1,0 +1,10 @@
+{
+  "formato": "story",
+  "layout": "mito_verdade",
+  "kicker": "MITO OU VERDADE?",
+  "titulo": ["Varizes só", "aparecem com", "*a idade?*"],
+  "mito": "Varizes só aparecem com a idade.",
+  "verdade": "São mais comuns com o passar dos anos, mas podem surgir em pessoas jovens, principalmente quando há histórico familiar.",
+  "cta": "Envie para alguém da família",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
