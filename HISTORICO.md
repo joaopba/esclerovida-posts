@@ -19,3 +19,4 @@
 | 2026-10-23 | 19:00 | story | P11 | Trabalha muito tempo em pé? | stories/2026-10-23-1900-trabalha-em-pe.jpg | 404586194 |
 | 2026-10-24 | 12:00 | feed | P10 | Pernas inchadas no fim do dia? | feed/2026-10-24-1200-pernas-inchadas.jpg | 405039458 |
 | 2026-10-24 | 12:05 | story-aviso | P10 | Tem post novo no feed: Pernas inchadas no fim do dia? | stories/2026-10-24-1205-aviso-pernas-inchadas.jpg | 405039741 |
+| 2026-10-24 | 19:00 | story | P22 | Varizes só aparecem com a idade? | stories/2026-10-24-1900-varizes-e-idade.jpg | 405286081 |
