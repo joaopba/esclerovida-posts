@@ -1,0 +1,14 @@
+{
+  "formato": "feed",
+  "layout": "lista",
+  "kicker": "CUIDE DAS PERNAS",
+  "titulo": ["Trabalha muito", "*tempo sentado?*"],
+  "itens": [
+    "Levante e caminhe a cada hora",
+    "Movimente os tornozelos",
+    "Evite ficar na mesma posição",
+    "Use os intervalos para andar"
+  ],
+  "cta": "Envie para quem trabalha sentado",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
