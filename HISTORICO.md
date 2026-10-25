@@ -22,3 +22,4 @@
 | 2026-10-24 | 19:00 | story | P22 | Varizes só aparecem com a idade? | stories/2026-10-24-1900-varizes-e-idade.jpg | 405286081 |
 | 2026-10-25 | 12:00 | feed | P12 | Trabalha muito tempo sentado? | feed/2026-10-25-1200-trabalha-sentado.jpg | 405715360 |
 | 2026-10-25 | 12:05 | story-aviso | P12 | Tem post novo no feed: Trabalha muito tempo sentado? | stories/2026-10-25-1205-aviso-trabalha-sentado.jpg | 405715377 |
+| 2026-10-25 | 19:00 | story | P24 | Chegou o dia do atendimento? | stories/2026-10-25-1900-dia-de-atendimento.jpg | 406012851 |
