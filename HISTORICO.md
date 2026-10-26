@@ -23,3 +23,5 @@
 | 2026-10-25 | 12:00 | feed | P12 | Trabalha muito tempo sentado? | feed/2026-10-25-1200-trabalha-sentado.jpg | 405715360 |
 | 2026-10-25 | 12:05 | story-aviso | P12 | Tem post novo no feed: Trabalha muito tempo sentado? | stories/2026-10-25-1205-aviso-trabalha-sentado.jpg | 405715377 |
 | 2026-10-25 | 19:00 | story | P24 | Chegou o dia do atendimento? | stories/2026-10-25-1900-dia-de-atendimento.jpg | 406012851 |
+| 2026-10-26 | 12:00 | feed | P05 | Varizes não causam problemas? | feed/2026-10-26-1200-varizes-causam-problemas.jpg | 406723772 |
+| 2026-10-26 | 12:05 | story-aviso | P05 | Tem post novo no feed: Varizes não causam problemas? | stories/2026-10-26-1205-aviso-varizes-causam-problemas.jpg | 406723810 |
