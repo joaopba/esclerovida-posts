@@ -1,0 +1,10 @@
+{
+  "formato": "feed",
+  "layout": "mito_verdade",
+  "kicker": "MITO OU VERDADE?",
+  "titulo": ["Varizes não", "*causam problemas?*"],
+  "mito": "Varizes não causam nenhum problema para a saúde.",
+  "verdade": "Varizes podem causar dor, peso e inchaço e, sem acompanhamento, levar a manchas e feridas na pele. O tratamento pelo SUS é não estético e tem indicação clínica.",
+  "cta": "Envie para quem ainda acredita",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
