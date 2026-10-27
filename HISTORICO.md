@@ -26,3 +26,4 @@
 | 2026-10-26 | 12:00 | feed | P05 | Varizes não causam problemas? | feed/2026-10-26-1200-varizes-causam-problemas.jpg | 406723772 |
 | 2026-10-26 | 12:05 | story-aviso | P05 | Tem post novo no feed: Varizes não causam problemas? | stories/2026-10-26-1205-aviso-varizes-causam-problemas.jpg | 406723810 |
 | 2026-10-26 | 19:00 | story | P18 | Eleve as pernas | stories/2026-10-26-1900-eleve-as-pernas.jpg | 407181106 |
+| 2026-10-27 | 12:00 | feed | P13 | Ferida na perna que não cicatriza? | feed/2026-10-27-1200-feridas-que-nao-cicatrizam.jpg | 407915075 |
