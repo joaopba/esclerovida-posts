@@ -28,3 +28,4 @@
 | 2026-10-26 | 19:00 | story | P18 | Eleve as pernas | stories/2026-10-26-1900-eleve-as-pernas.jpg | 407181106 |
 | 2026-10-27 | 12:00 | feed | P13 | Ferida na perna que não cicatriza? | feed/2026-10-27-1200-feridas-que-nao-cicatrizam.jpg | 407915075 |
 | 2026-10-27 | 19:00 | story | P30 | Por que tratar na sua cidade? | stories/2026-10-27-1900-tratar-no-municipio.jpg | 408320832 |
+| 2026-10-28 | 12:00 | feed | P14 | Só mulheres têm varizes? | feed/2026-10-28-1200-so-mulheres-tem-varizes.jpg | 409034285 |
