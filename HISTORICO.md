@@ -29,3 +29,4 @@
 | 2026-10-27 | 12:00 | feed | P13 | Ferida na perna que não cicatriza? | feed/2026-10-27-1200-feridas-que-nao-cicatrizam.jpg | 407915075 |
 | 2026-10-27 | 19:00 | story | P30 | Por que tratar na sua cidade? | stories/2026-10-27-1900-tratar-no-municipio.jpg | 408320832 |
 | 2026-10-28 | 12:00 | feed | P14 | Só mulheres têm varizes? | feed/2026-10-28-1200-so-mulheres-tem-varizes.jpg | 409034285 |
+| 2026-10-28 | 19:00 | story | P25 | Meias de compressão | stories/2026-10-28-1900-meias-de-compressao.jpg | 409447156 |
