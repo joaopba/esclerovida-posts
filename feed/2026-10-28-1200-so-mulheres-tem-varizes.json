@@ -1,0 +1,10 @@
+{
+  "formato": "feed",
+  "layout": "mito_verdade",
+  "kicker": "MITO OU VERDADE?",
+  "titulo": ["Só mulheres", "*têm varizes?*"],
+  "mito": "Varizes são um problema só das mulheres.",
+  "verdade": "São mais comuns em mulheres, mas homens também têm varizes e devem ficar atentos aos sinais.",
+  "cta": "Você acreditava nisso? Comente",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
