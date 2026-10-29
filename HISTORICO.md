@@ -31,3 +31,4 @@
 | 2026-10-28 | 12:00 | feed | P14 | Só mulheres têm varizes? | feed/2026-10-28-1200-so-mulheres-tem-varizes.jpg | 409034285 |
 | 2026-10-28 | 19:00 | story | P25 | Meias de compressão | stories/2026-10-28-1900-meias-de-compressao.jpg | 409447156 |
 | 2026-10-29 | 12:08 | feed | P15 | Varizes tratadas no seu município | feed/2026-10-29-1200-para-prefeituras.jpg | 410173462 |
+| 2026-10-29 | 19:00 | story | P26 | Varizes na família? | stories/2026-10-29-1900-historico-familiar.jpg | 410582151 |
