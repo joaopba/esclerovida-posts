@@ -1,0 +1,10 @@
+{
+  "formato": "story",
+  "layout": "cidades",
+  "kicker": "ONDE ESTAMOS",
+  "titulo": ["Varizes tratadas", "*na sua cidade*"],
+  "subtitulo": "Pelo SUS, sem custo e sem internação.",
+  "itens": ["Barra do Choça", "Bom Jesus da Serra", "Caculé", "Itororó", "Planalto"],
+  "cta": "Envie para alguém dessas cidades",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
