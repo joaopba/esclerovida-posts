@@ -34,3 +34,4 @@
 | 2026-10-29 | 19:00 | story | P26 | Varizes na família? | stories/2026-10-29-1900-historico-familiar.jpg | 410582151 |
 | 2026-10-30 | 12:00 | feed | P17 | Exercício piora as varizes? | feed/2026-10-30-1200-exercicio-e-varizes.jpg | 411301944 |
 | 2026-10-30 | 19:00 | story | P28 | Calor e pernas pesadas? | stories/2026-10-30-1900-calor-pernas-pesadas.jpg | 411706434 |
+| 2026-10-31 | 12:00 | feed | P19 | Câimbras nas pernas à noite? | feed/2026-10-31-1200-caimbras-a-noite.jpg | 412205111 |
