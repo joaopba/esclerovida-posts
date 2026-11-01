@@ -37,3 +37,4 @@
 | 2026-10-31 | 12:00 | feed | P19 | Câimbras nas pernas à noite? | feed/2026-10-31-1200-caimbras-a-noite.jpg | 412205111 |
 | 2026-10-31 | 19:00 | story | P08 | Varizes tratadas na sua cidade | stories/2026-10-31-1900-onde-estamos.jpg | 412488779 |
 | 2026-11-01 | 12:00 | feed | P20 | Quem cuida de você? | feed/2026-11-01-1200-quem-cuida-de-voce.jpg | 412968334 |
+| 2026-11-01 | 19:00 | story | P02 | Suas pernas dão sinais? | stories/2026-11-01-1900-suas-pernas-dao-sinais.jpg | 413303598 |
