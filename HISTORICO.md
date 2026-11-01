@@ -36,3 +36,4 @@
 | 2026-10-30 | 19:00 | story | P28 | Calor e pernas pesadas? | stories/2026-10-30-1900-calor-pernas-pesadas.jpg | 411706434 |
 | 2026-10-31 | 12:00 | feed | P19 | Câimbras nas pernas à noite? | feed/2026-10-31-1200-caimbras-a-noite.jpg | 412205111 |
 | 2026-10-31 | 19:00 | story | P08 | Varizes tratadas na sua cidade | stories/2026-10-31-1900-onde-estamos.jpg | 412488779 |
+| 2026-11-01 | 12:00 | feed | P20 | Quem cuida de você? | feed/2026-11-01-1200-quem-cuida-de-voce.jpg | 412968334 |
