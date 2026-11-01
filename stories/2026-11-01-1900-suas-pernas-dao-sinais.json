@@ -1,0 +1,16 @@
+{
+  "formato": "story",
+  "layout": "lista",
+  "kicker": "SAÚDE DAS PERNAS",
+  "titulo": ["Suas pernas", "*dão sinais?*"],
+  "subtitulo": "Reconhecer cedo muda o tratamento.",
+  "itens": [
+    "Peso e cansaço no fim do dia",
+    "Inchaço nas pernas",
+    "Coceira e manchas escuras na pele",
+    "Veias dilatadas e tortuosas",
+    "Feridas que não cicatrizam"
+  ],
+  "cta": "Procure o posto de saúde da sua cidade",
+  "nota": "O agendamento é feito pela Secretaria Municipal de Saúde."
+}
