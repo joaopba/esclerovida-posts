@@ -38,3 +38,4 @@
 | 2026-10-31 | 19:00 | story | P08 | Varizes tratadas na sua cidade | stories/2026-10-31-1900-onde-estamos.jpg | 412488779 |
 | 2026-11-01 | 12:00 | feed | P20 | Quem cuida de você? | feed/2026-11-01-1200-quem-cuida-de-voce.jpg | 412968334 |
 | 2026-11-01 | 19:00 | story | P02 | Suas pernas dão sinais? | stories/2026-11-01-1900-suas-pernas-dao-sinais.jpg | 413303598 |
+| 2026-11-02 | 12:45 | feed | P23 | Hábitos que ajudam a circulação | feed/2026-11-02-1200-habitos-circulacao.jpg | 414136569 |
