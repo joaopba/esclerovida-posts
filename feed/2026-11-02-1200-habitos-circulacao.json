@@ -1,0 +1,15 @@
+{
+  "formato": "feed",
+  "layout": "lista",
+  "kicker": "HÁBITOS DO DIA A DIA",
+  "titulo": ["Hábitos que", "*ajudam a circulação*"],
+  "itens": [
+    "Caminhar",
+    "Não ficar na mesma posição",
+    "Elevar as pernas no fim do dia",
+    "Manter o peso saudável",
+    "Beber água"
+  ],
+  "cta": "Salve e coloque em prática",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
