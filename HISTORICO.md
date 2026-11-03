@@ -40,3 +40,4 @@
 | 2026-11-01 | 19:00 | story | P02 | Suas pernas dão sinais? | stories/2026-11-01-1900-suas-pernas-dao-sinais.jpg | 413303598 |
 | 2026-11-02 | 12:45 | feed | P23 | Hábitos que ajudam a circulação | feed/2026-11-02-1200-habitos-circulacao.jpg | 414136569 |
 | 2026-11-02 | 19:00 | story | P03 | Por onde começar? | stories/2026-11-02-1900-caminho-do-atendimento.jpg | 414557258 |
+| 2026-11-03 | 12:00 | feed | P21 | Gestação e varizes | feed/2026-11-03-1200-gestacao-e-varizes.jpg | 415354335 |
