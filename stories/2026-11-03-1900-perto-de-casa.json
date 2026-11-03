@@ -1,0 +1,9 @@
+{
+  "formato": "story",
+  "layout": "lista",
+  "kicker": "ATENDIMENTO",
+  "titulo": ["Tratar varizes", "*perto de casa*"],
+  "itens": ["Tratamento ambulatorial", "A equipe vai até o município", "Sessões rápidas", "Volta para casa no mesmo dia"],
+  "cta": "Procure o posto de saúde da sua cidade",
+  "nota": "O agendamento é feito pela Secretaria Municipal de Saúde."
+}
