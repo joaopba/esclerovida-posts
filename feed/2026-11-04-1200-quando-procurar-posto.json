@@ -1,0 +1,15 @@
+{
+  "formato": "feed",
+  "layout": "lista",
+  "kicker": "FIQUE ATENTO",
+  "titulo": ["Quando procurar", "*o posto de saúde?*"],
+  "itens": [
+    "Dor ou peso nas pernas que atrapalham a rotina",
+    "Inchaço frequente",
+    "Manchas escuras na pele",
+    "Feridas que não cicatrizam",
+    "Veias dilatadas que estão aumentando"
+  ],
+  "cta": "Procure o posto de saúde da sua cidade",
+  "nota": "O agendamento é feito pela Secretaria Municipal de Saúde."
+}
