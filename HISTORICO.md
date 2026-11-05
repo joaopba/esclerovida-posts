@@ -44,3 +44,4 @@
 | 2026-11-03 | 19:00 | story | P06 | Tratar varizes perto de casa | stories/2026-11-03-1900-perto-de-casa.jpg | 415826275 |
 | 2026-11-04 | 12:00 | feed | P29 | Quando procurar o posto de saúde? | feed/2026-11-04-1200-quando-procurar-posto.jpg | 416585602 |
 | 2026-11-04 | 19:00 | story | P11 | Muitas horas de pé no trabalho? | stories/2026-11-04-1900-rotina-em-pe.jpg | 417052264 |
+| 2026-11-05 | 12:00 | feed | P27 | Varizes têm tratamento pelo SUS | feed/2026-11-05-1200-tratamento-pelo-sus.jpg | 417815979 |
