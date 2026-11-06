@@ -1,0 +1,10 @@
+{
+  "formato": "story",
+  "layout": "mito_verdade",
+  "kicker": "MITO OU VERDADE?",
+  "titulo": ["Jovem também", "*tem varizes?*"],
+  "mito": "Só quem tem mais idade tem varizes.",
+  "verdade": "As varizes são mais comuns com o passar dos anos, mas podem surgir em pessoas jovens, principalmente quando há histórico familiar.",
+  "cta": "Envie para quem ainda acredita nisso",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
