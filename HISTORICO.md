@@ -46,3 +46,4 @@
 | 2026-11-04 | 19:00 | story | P11 | Muitas horas de pé no trabalho? | stories/2026-11-04-1900-rotina-em-pe.jpg | 417052264 |
 | 2026-11-05 | 12:00 | feed | P27 | Varizes têm tratamento pelo SUS | feed/2026-11-05-1200-tratamento-pelo-sus.jpg | 417815979 |
 | 2026-11-05 | 19:00 | story | P16 | Coceira e manchas nas pernas? | stories/2026-11-05-1900-manchas-e-coceira.jpg | 418265615 |
+| 2026-11-06 | 12:00 | feed | P07 | Por que caminhar ajuda a circulação? | feed/2026-11-06-1200-por-que-caminhar.jpg | 419008334 |
