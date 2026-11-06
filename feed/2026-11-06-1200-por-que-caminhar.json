@@ -1,0 +1,14 @@
+{
+  "formato": "feed",
+  "layout": "lista",
+  "kicker": "HÁBITOS QUE AJUDAM",
+  "titulo": ["Por que caminhar", "*ajuda a circulação?*"],
+  "itens": [
+    "A panturrilha age como uma bomba",
+    "Ajuda o sangue a voltar ao coração",
+    "Caminhadas regulares ajudam"
+  ],
+  "destaque": "Tem outros problemas de saúde? Busque orientação antes de começar.",
+  "cta": "Envie para alguém da família",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
