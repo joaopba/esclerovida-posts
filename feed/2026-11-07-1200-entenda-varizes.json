@@ -1,0 +1,15 @@
+{
+  "formato": "feed",
+  "layout": "lista",
+  "kicker": "ENTENDA",
+  "titulo": ["Varizes:", "*o que você precisa saber*"],
+  "itens": [
+    "Veias dilatadas e tortuosas",
+    "Mais comuns nas pernas",
+    "Válvulas das veias falham",
+    "O sangue volta com dificuldade"
+  ],
+  "destaque": "Varizes podem causar sintomas e merecem avaliação.",
+  "cta": "Salve para não esquecer",
+  "nota": "O atendimento começa no posto de saúde da sua cidade."
+}
