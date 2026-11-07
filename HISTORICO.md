@@ -48,3 +48,4 @@
 | 2026-11-05 | 19:00 | story | P16 | Coceira e manchas nas pernas? | stories/2026-11-05-1900-manchas-e-coceira.jpg | 418265615 |
 | 2026-11-06 | 12:00 | feed | P07 | Por que caminhar ajuda a circulação? | feed/2026-11-06-1200-por-que-caminhar.jpg | 419008334 |
 | 2026-11-06 | 19:00 | story | P22 | Jovem também tem varizes? | stories/2026-11-06-1900-varizes-em-jovens.jpg | 419441360 |
+| 2026-11-07 | 12:00 | feed | P01 | Varizes: o que você precisa saber | feed/2026-11-07-1200-entenda-varizes.jpg | 419989639 |
