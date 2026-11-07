@@ -1,0 +1,10 @@
+{
+  "formato": "story",
+  "layout": "texto",
+  "kicker": "ATENDIMENTO",
+  "titulo": ["Já tem dia", "*marcado?*"],
+  "lead": "A equipe vem até o seu município.",
+  "texto": "No dia marcado pela Secretaria de Saúde, a equipe da EscleroVida chega à sua cidade para o atendimento. Fique atento às orientações da Secretaria sobre local e horário.",
+  "cta": "Procure o posto de saúde da sua cidade",
+  "nota": "O agendamento é feito pela Secretaria Municipal de Saúde."
+}
