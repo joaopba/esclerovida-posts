@@ -50,3 +50,4 @@
 | 2026-11-06 | 19:00 | story | P22 | Jovem também tem varizes? | stories/2026-11-06-1900-varizes-em-jovens.jpg | 419441360 |
 | 2026-11-07 | 12:00 | feed | P01 | Varizes: o que você precisa saber | feed/2026-11-07-1200-entenda-varizes.jpg | 419989639 |
 | 2026-11-07 | 19:00 | story | P24 | Já tem dia marcado? | stories/2026-11-07-1900-dia-marcado.jpg | 420276297 |
+| 2026-11-08 | 12:00 | feed | P09 | Pernas cruzadas dão varizes? É mito! | feed/2026-11-08-1200-pernas-cruzadas-mito.jpg | 420790536 |
