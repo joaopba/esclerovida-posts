@@ -52,3 +52,4 @@
 | 2026-11-07 | 19:00 | story | P24 | Já tem dia marcado? | stories/2026-11-07-1900-dia-marcado.jpg | 420276297 |
 | 2026-11-08 | 12:00 | feed | P09 | Pernas cruzadas dão varizes? É mito! | feed/2026-11-08-1200-pernas-cruzadas-mito.jpg | 420790536 |
 | 2026-11-08 | 19:00 | story | P18 | Pernas pesadas no fim do dia? Eleve as pernas | stories/2026-11-08-1900-pernas-para-cima.jpg | 421112725 |
+| 2026-11-09 | 12:00 | feed | P04 | Quem tem mais chance de ter varizes? | feed/2026-11-09-1200-quem-tem-mais-chance.jpg | 421920154 |
