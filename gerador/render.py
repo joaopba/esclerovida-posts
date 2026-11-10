@@ -119,7 +119,7 @@ def logo_rgba():
     return Image.fromarray((a * 255).astype(np.uint8), "L")
 
 
-def fundo(W, H, alpha_logo):
+def fundo(W, H, alpha_logo, marca=0.06):
     yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     t = (yy / H * 0.8 + xx / W * 0.2)[..., None]
     img = BG_TOP * (1 - t) + BG_BOT * t
@@ -148,7 +148,7 @@ def fundo(W, H, alpha_logo):
     hh = int(H * 0.58)
     heart = heart.resize((round(heart.width * hh / heart.height), hh), Image.LANCZOS)
     mark = Image.new("RGBA", heart.size, WHITE + (0,))
-    mark.putalpha(heart.point(lambda v: v * 0.06))
+    mark.putalpha(heart.point(lambda v: v * marca))
     base.alpha_composite(mark, (W - round(heart.width * 0.62), H - round(hh * 0.86)))
     return base
 

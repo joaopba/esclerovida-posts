@@ -71,7 +71,7 @@ def render(p, saida):
 
     # ---------- fundo + cabeçalho ----------
     alpha = R.logo_rgba()
-    img = R.fundo(W, H, alpha)
+    img = R.fundo(W, H, alpha, marca=p.get("marca_dagua", 0.025))   # coração bem discreto, para não brigar com o mapa
     lw = fmt["logo_w"] * S
     lh = round(alpha.height * lw / alpha.width)
     img = R.cabecalho(img, alpha, fmt, lw, lh)
