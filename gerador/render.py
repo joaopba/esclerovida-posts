@@ -414,15 +414,17 @@ def b_cta(c, img, d, y, texto, nota, desenhar):
 def b_rodape(c, img, d, y, desenhar):
     if desenhar:
         lay = camada(img)
-        ImageDraw.Draw(lay).line([(c.W / 2 - c.z(70), y), (c.W / 2 + c.z(70), y)],
-                                 fill=WHITE + (70,), width=2 * S)
+        ImageDraw.Draw(lay).line([(c.W / 2 - c.z(44), y), (c.W / 2 + c.z(44), y)],
+                                 fill=WHITE + (60,), width=2 * S)
         img = Image.alpha_composite(img, lay)
         d = ImageDraw.Draw(img)
-    y += c.z(22)
-    for l, fname in zip(RT, ("Inter-SemiBold.otf", "Inter-Regular.otf")):
+    y += c.z(16)
+    # Rodapé do RT: sempre pequeno e discreto (legível, mas sem competir com o conteúdo).
+    tam = min(c.z(19), 19 * S)
+    for l, fname in zip(RT, ("Inter-Medium.otf", "Inter-Regular.otf")):
         if desenhar:
-            d.text((c.W / 2, y), l, font=font(fname, c.z(25)), fill=FOOT, anchor="mt")
-        y += c.z(35)
+            d.text((c.W / 2, y), l, font=font(fname, tam), fill=FOOT, anchor="mt")
+        y += tam * 1.42
     return img, y
 
 

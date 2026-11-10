@@ -29,7 +29,7 @@ Toda arte e toda legenda seguem estas regras. Na dúvida, não publique: avise o
 - Quando o tema for sinais, sintomas ou atendimento, orientar: **procure o posto de saúde da sua cidade**; o agendamento é feito pela Secretaria Municipal de Saúde.
 - Feridas que não cicatrizam: orientar a procurar a unidade de saúde.
 - Tom informativo, acolhedor e direto, em português simples e frases curtas.
-- O rodapé do Responsável Técnico já sai na arte (o gerador inclui). Na legenda do feed, incluir no fim:
+- O rodapé do Responsável Técnico já sai na arte (o gerador inclui), **sempre pequeno e discreto** (no máximo ~19 px na arte final). Não aumentar. Na legenda do feed, incluir no fim:
   `Responsável Técnico: Dr. Vinicius Guerra | Cirurgião Vascular | CRM-BA 29908 | RQE 23546`
 
 ## Formato
