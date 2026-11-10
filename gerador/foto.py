@@ -11,6 +11,7 @@ e mais:
     "cor_botao": [r, g, b]         # opcional: cor do círculo da seta no botão (ex.: cores do município)
     "logo2_altura": 170            # altura do selo do parceiro (px), com --logo2
     "titulo_destaque_escala": 1.5  # opcional: aumenta a linha do título com * (ex.: nome da cidade)
+    "logo2_moldura": false         # opcional: PNG transparente direto na arte, sem quadrado
     "logo2_pos": "topo" | "baixo"  # "baixo": logo grande no canto inferior direito, ao lado do botão
 A foto ocupa o topo e se funde ao fundo azul. O rodapé do RT sai sempre.
 Use só fotos sem pacientes identificáveis (REGRAS.md).
@@ -54,11 +55,21 @@ def compor_foto(img, foto, recorte, h_foto):
     return img
 
 
-def logo_parceiro(img, caminho, x_dir, y_topo, altura):
-    """Logo do parceiro como selo de cantos arredondados (mantém as cores originais)."""
+def logo_parceiro(img, caminho, x_dir, y_topo, altura, moldura=True):
+    """Logo do parceiro. moldura=True: selo de cantos arredondados (cores originais).
+    moldura=False: PNG transparente aplicado direto na arte, com sombra suave."""
     lg = Image.open(caminho).convert("RGBA")
     esc = altura / lg.height
     lg = lg.resize((round(lg.width * esc), round(altura)), Image.LANCZOS)
+    if not moldura:
+        x0, y0 = round(x_dir - lg.width), round(y_topo)
+        sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        sombra = Image.new("RGBA", lg.size, (0, 14, 30, 0))
+        sombra.putalpha(lg.getchannel("A").point(lambda v: v * 0.55))
+        sh.alpha_composite(sombra, (x0, y0 + round(altura * 0.012)))
+        img = Image.alpha_composite(img, sh.filter(ImageFilter.GaussianBlur(altura * 0.02)))
+        img.alpha_composite(lg, (x0, y0))
+        return img
     r = round(altura * 0.06)
     sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
     x0, y0 = round(x_dir - lg.width), round(y_topo)
@@ -180,7 +191,8 @@ def main():
         baixo = logo2 and p.get("logo2_pos") == "baixo"
         L = p.get("logo2_altura", 170) * S
         if baixo:
-            larg_cta = c.CW - L - c.z(40)
+            _lg = Image.open(logo2)
+            larg_cta = c.CW - L * _lg.width / _lg.height - c.z(80 if not p.get("logo2_moldura", True) else 40)
             _, h_esq = cta_esquerda(c, Image.new("RGBA", (10, 10)), 0, larg_cta, p.get("cta"), p.get("nota"), False)
             h_cta = max(L, h_esq)
         else:
@@ -215,7 +227,15 @@ def main():
     d = ImageDraw.Draw(img)
     if baixo:
         img, _ = cta_esquerda(c, img, y_cta + (h_cta - h_esq) / 2, larg_cta, p.get("cta"), p.get("nota"), True)
-        img = logo_parceiro(img, logo2, c.W - c.M, y_cta + (h_cta - L) / 2, L)
+        moldura = p.get("logo2_moldura", True)
+        if not moldura:
+            # filete vertical separando o botão da logo
+            lay = R.camada(img)
+            xs = c.W - c.M - L * Image.open(logo2).width / Image.open(logo2).height - c.z(34)
+            ImageDraw.Draw(lay).line([(xs, y_cta + L * 0.12), (xs, y_cta + L * 0.88)],
+                                     fill=R.WHITE + (60,), width=2 * S)
+            img = Image.alpha_composite(img, lay)
+        img = logo_parceiro(img, logo2, c.W - c.M, y_cta + (h_cta - L) / 2, L, moldura)
     else:
         img, _ = R.b_cta(c, img, d, y_cta, p.get("cta"), p.get("nota"), True)
     d = ImageDraw.Draw(img)

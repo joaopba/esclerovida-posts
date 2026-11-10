@@ -25,7 +25,8 @@
     69,
     34
   ],
-  "logo2_altura": 230,
+  "logo2_altura": 250,
   "logo2_pos": "baixo",
-  "titulo_destaque_escala": 1.6
+  "titulo_destaque_escala": 1.6,
+  "logo2_moldura": false
 }
