@@ -12,6 +12,7 @@ e mais:
     "logo2_altura": 170            # altura do selo do parceiro (px), com --logo2
     "titulo_destaque_escala": 1.5  # opcional: aumenta a linha do título com * (ex.: nome da cidade)
     "logo2_moldura": false         # opcional: PNG transparente direto na arte, sem quadrado
+    "logo2_rotulo": "EM PARCERIA COM"  # opcional: texto pequeno acima da logo do parceiro
     "logo2_pos": "topo" | "baixo"  # "baixo": logo grande no canto inferior direito, ao lado do botão
 A foto ocupa o topo e se funde ao fundo azul. O rodapé do RT sai sempre.
 Use só fotos sem pacientes identificáveis (REGRAS.md).
@@ -235,7 +236,25 @@ def main():
             ImageDraw.Draw(lay).line([(xs, y_cta + L * 0.12), (xs, y_cta + L * 0.88)],
                                      fill=R.WHITE + (60,), width=2 * S)
             img = Image.alpha_composite(img, lay)
-        img = logo_parceiro(img, logo2, c.W - c.M, y_cta + (h_cta - L) / 2, L, moldura)
+        y_logo, L_logo = y_cta + (h_cta - L) / 2, L
+        rot = p.get("logo2_rotulo")
+        if rot:
+            # rótulo pequeno, espaçado, centralizado acima da logo (ex.: "EM PARCERIA COM")
+            fr = R.font("Inter-SemiBold.otf", c.z(22))
+            sp = c.z(4)
+            dr = ImageDraw.Draw(img)
+            tw = sum(dr.textlength(ch, font=fr) + sp for ch in rot) - sp
+            h_rot = c.z(22) * 1.2 + c.z(18)
+            L_logo = L - h_rot
+            _lg = Image.open(logo2)
+            lw2 = L_logo * _lg.width / _lg.height
+            cx = c.W - c.M - lw2 / 2
+            x = cx - tw / 2
+            for ch in rot:
+                dr.text((x, y_logo), ch, font=fr, fill=R.SOFT)
+                x += dr.textlength(ch, font=fr) + sp
+            y_logo += h_rot
+        img = logo_parceiro(img, logo2, c.W - c.M, y_logo, L_logo, moldura)
     else:
         img, _ = R.b_cta(c, img, d, y_cta, p.get("cta"), p.get("nota"), True)
     d = ImageDraw.Draw(img)
