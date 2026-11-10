@@ -142,6 +142,14 @@ def render(p, foto, logo2, saida):
         # a foto se desfaz em degradê no fundo azul
         hp = round(ys + z(96))
         img = gradiente(W, H, ys * 0.80).convert("RGBA")
+        # coração da marca como marca d'água, sangrando no canto inferior direito
+        al_logo = R.logo_rgba()
+        heart = al_logo.crop((0, 0, 338, al_logo.height))
+        hh = int(H * 0.58)
+        heart = heart.resize((round(heart.width * hh / heart.height), hh), Image.LANCZOS)
+        mark = Image.new("RGBA", heart.size, WHITE + (0,))
+        mark.putalpha(heart.point(lambda v: v * p.get("marca_dagua", 0.07)))
+        img.alpha_composite(mark, (W - round(heart.width * 0.62), H - round(hh * 0.86)))
         foto_im = preparar_foto(foto, p.get("recorte", [0, 0, 1, 1]), W, hp, base=0.0).convert("RGBA")
         yy = np.linspace(0, 1, hp, dtype=np.float32)
         fade = 0.42
