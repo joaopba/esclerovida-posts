@@ -1,32 +1,31 @@
 {
-  "formato": "feed",
-  "titulo": [
-    "Começamos em",
-    "*Caculé!*"
+  "titulo_pre": "Começamos em",
+  "cidade": "Caculé",
+  "subtitulo": "Tratamento de varizes pelo SUS",
+  "itens": [
+    "Sem custo",
+    "Sem internação",
+    "Sessões rápidas"
   ],
-  "subtitulo": "Tratamento de varizes pelo SUS, sem custo e sem internação.",
+  "cta_titulo": "Procure o posto de saúde da sua cidade",
+  "cta_texto": "O agendamento é feito pela Secretaria Municipal de Saúde.",
+  "rotulo": "EM PARCERIA COM",
+  "cor_destaque": [
+    255,
+    219,
+    147
+  ],
+  "cor_acento": [
+    233,
+    69,
+    34
+  ],
+  "formato": "feed",
   "recorte": [
     0,
     0.11,
     1,
     1
   ],
-  "foto_altura": 0.47,
-  "cta": "Marque alguém de Caculé",
-  "nota": "O atendimento começa no posto de saúde da sua cidade.",
-  "cor_destaque": [
-    255,
-    219,
-    147
-  ],
-  "cor_botao": [
-    233,
-    69,
-    34
-  ],
-  "logo2_altura": 280,
-  "logo2_pos": "baixo",
-  "titulo_destaque_escala": 1.6,
-  "logo2_moldura": false,
-  "logo2_rotulo": "EM PARCERIA COM"
+  "logo2_altura": 200
 }
