@@ -1,0 +1,11 @@
+{
+  "formato": "feed",
+  "cidade": "Caculé",
+  "subtitulo": "Tratamento de varizes pelo SUS",
+  "rotulo": "EM PARCERIA COM",
+  "recorte": [0, 0, 1, 1],
+  "foto_y": 150,
+  "foto_altura": 810,
+  "fade_base": 0.26,
+  "cor_destaque": [255, 219, 147]
+}
