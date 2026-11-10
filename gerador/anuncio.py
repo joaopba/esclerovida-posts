@@ -10,7 +10,7 @@ faixa com o caminho do SUS. O rodapé do Responsável Técnico sai sempre.
 JSON:
     {
       "formato": "feed" | "story",
-      "titulo_pre": "Começamos em",
+      "titulo_pre": "Começamos os\natendimentos em",   # 1 ou 2 linhas (separe com \n)
       "cidade": "Caculé",
       "subtitulo": "Tratamento de varizes pelo SUS",
       "itens": ["Sem custo", "Sem internação", "Sessões rápidas"],     # até 3, curtos
@@ -122,7 +122,14 @@ def render(p, foto, logo2, saida):
         size -= z(4)
     bb = f_cid.getbbox(p["cidade"], anchor="ls")
     asc, desc = -bb[1], max(0, bb[3])
-    pre_asc = z(54) * 0.74
+    pre_linhas = p["titulo_pre"].split("\n")           # aceita 2 linhas com "\n"
+    pre_tam = z(54 if len(pre_linhas) == 1 else 50)
+    while max(md.textlength(l, font=R.font("Inter-Medium.otf", pre_tam)) for l in pre_linhas) > disp \
+            and pre_tam > z(34):
+        pre_tam -= z(1)
+    f_pre = R.font("Inter-Medium.otf", pre_tam)
+    pre_lh = pre_tam * 1.16
+    pre_asc = pre_tam * 0.74 + (len(pre_linhas) - 1) * pre_lh
     tit_h = pre_asc + z(30) + asc + desc
     row_h = max(tit_h, bloco_h)
 
@@ -182,7 +189,8 @@ def render(p, foto, logo2, saida):
     # ---------- título + logo do parceiro ----------
     y = ys + blocos[0]
     ty = y + (row_h - tit_h) / 2
-    d.text((M, ty + pre_asc), p["titulo_pre"], font=f_pre, fill=WHITE, anchor="ls")
+    for i, l in enumerate(pre_linhas):
+        d.text((M, ty + pre_asc - (len(pre_linhas) - 1 - i) * pre_lh), l, font=f_pre, fill=WHITE, anchor="ls")
     d.text((M - size * 0.045, ty + pre_asc + z(30) + asc), p["cidade"], font=f_cid, fill=creme, anchor="ls")
 
     by = y + (row_h - bloco_h) / 2
