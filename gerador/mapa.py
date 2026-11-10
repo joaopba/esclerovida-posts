@@ -128,7 +128,7 @@ def render(p, saida):
     dm = ImageDraw.Draw(mapa)
     sil = Image.new("L", img.size, 0)
     ds = ImageDraw.Draw(sil)
-    a_fill, a_linha = (30, 120) if estado else (13, 52)
+    a_fill, a_linha = (30, 120) if estado else (20, 125)
     for m in muns:
         for a in m["aneis"]:
             pol = [xy(*q) for q in a]
@@ -239,7 +239,7 @@ def render(p, saida):
                 ld.polygon([bxy(*q) for q in a], fill=WHITE + (255,))
         sil = lay.getchannel("A").filter(ImageFilter.MaxFilter(3))
         lay = Image.new("RGBA", img.size, WHITE + (0,))
-        lay.putalpha(sil.point(lambda v: v * 0.26))
+        lay.putalpha(sil.point(lambda v: v * 0.36))
         img = Image.alpha_composite(img, lay)
         d = ImageDraw.Draw(img)
         for m in muns:
