@@ -7,6 +7,9 @@ O JSON aceita os mesmos campos de render.py (formato, kicker, titulo, subtitulo,
 e mais:
     "recorte": [x0, y0, x1, y1]   # área da foto a usar, em proporção (0 a 1); padrão: foto inteira
     "foto_altura": 0.52            # fração da altura da arte ocupada pela foto
+    "cor_destaque": [r, g, b]      # opcional: cor do selo, da linha de destaque do título
+    "cor_botao": [r, g, b]         # opcional: cor do círculo da seta no botão (ex.: cores do município)
+    "logo2_altura": 170            # altura do selo do parceiro (px), com --logo2
 A foto ocupa o topo e se funde ao fundo azul. O rodapé do RT sai sempre.
 Use só fotos sem pacientes identificáveis (REGRAS.md).
 """
@@ -15,7 +18,7 @@ import os
 import sys
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import render as R  # noqa: E402
@@ -49,16 +52,21 @@ def compor_foto(img, foto, recorte, h_foto):
     return img
 
 
-def logo_parceiro(img, caminho, x_dir, y_centro, altura):
+def logo_parceiro(img, caminho, x_dir, y_topo, altura):
+    """Logo do parceiro como selo de cantos arredondados (mantém as cores originais)."""
     lg = Image.open(caminho).convert("RGBA")
     esc = altura / lg.height
     lg = lg.resize((round(lg.width * esc), round(altura)), Image.LANCZOS)
-    pad = round(altura * 0.16)
-    box = Image.new("RGBA", (lg.width + 2 * pad, lg.height + 2 * pad), (0, 0, 0, 0))
-    ImageDraw.Draw(box).rounded_rectangle([0, 0, box.width - 1, box.height - 1], radius=pad * 1.4,
-                                          fill=(255, 255, 255, 240))
-    box.alpha_composite(lg, (pad, pad))
-    img.alpha_composite(box, (round(x_dir - box.width), round(y_centro - box.height / 2)))
+    r = round(altura * 0.14)
+    sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    x0, y0 = round(x_dir - lg.width), round(y_topo)
+    ImageDraw.Draw(sh).rounded_rectangle([x0, y0 + r * 0.3, x0 + lg.width, y0 + lg.height + r * 0.3],
+                                         radius=r, fill=(0, 18, 38, 110))
+    img = Image.alpha_composite(img, sh.filter(ImageFilter.GaussianBlur(r * 0.6)))
+    m = Image.new("L", lg.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, lg.width - 1, lg.height - 1], radius=r, fill=255)
+    lg.putalpha(m)
+    img.alpha_composite(lg, (x0, y0))
     return img
 
 
@@ -76,6 +84,12 @@ def main():
     if erros:
         raise SystemExit("ERRO:\n" + "\n".join(erros))
     logo2 = args[args.index("--logo2") + 1] if "--logo2" in args else None
+    if p.get("cor_destaque"):
+        R.AQUA = tuple(p["cor_destaque"])
+        R.b_chip.__defaults__ = (R.AQUA, None, True)
+    if p.get("cor_botao"):
+        R.BG_BOT_RGB = tuple(p["cor_botao"])
+        R.CORAL = tuple(p["cor_botao"])
 
     fmt = R.FORMATOS[p["formato"]]
     alpha = R.logo_rgba()
@@ -115,7 +129,8 @@ def main():
         logo.putalpha(alpha)
         logo = logo.resize((lw, lh), Image.LANCZOS)
         img.alpha_composite(logo, (c.M, fmt["logo_y"] * S))
-        img = logo_parceiro(img, logo2, c.W - c.M, fmt["logo_y"] * S + lh / 2, lh * 1.05)
+        alt = p.get("logo2_altura", 170) * S
+        img = logo_parceiro(img, logo2, c.W - c.M, fmt["logo_y"] * S + lh / 2 - alt / 2, alt)
 
     y_rod = fim - h_rod
     y_cta = y_rod - c.z(30) - h_cta

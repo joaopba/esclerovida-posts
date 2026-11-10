@@ -1,10 +1,29 @@
 {
   "formato": "feed",
   "kicker": "CACULÉ",
-  "titulo": ["Começamos os", "*atendimentos!*"],
+  "titulo": [
+    "Começamos os",
+    "*atendimentos!*"
+  ],
   "subtitulo": "Tratamento de varizes pelo SUS, sem custo para o paciente e sem internação.",
-  "recorte": [0, 0.11, 1, 1],
+  "recorte": [
+    0,
+    0.11,
+    1,
+    1
+  ],
   "foto_altura": 0.55,
   "cta": "Marque alguém de Caculé",
-  "nota": "O atendimento começa no posto de saúde da sua cidade."
+  "nota": "O atendimento começa no posto de saúde da sua cidade.",
+  "cor_destaque": [
+    255,
+    219,
+    147
+  ],
+  "cor_botao": [
+    233,
+    69,
+    34
+  ],
+  "logo2_altura": 150
 }

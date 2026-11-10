@@ -1,10 +1,29 @@
 {
   "formato": "story",
   "kicker": "NOVO POST",
-  "titulo": ["Tem post novo", "*no feed!*"],
+  "titulo": [
+    "Tem post novo",
+    "*no feed!*"
+  ],
   "subtitulo": "Começamos os atendimentos de varizes em Caculé, pelo SUS e sem custo. Confira o post completo no nosso perfil.",
-  "recorte": [0, 0, 0.82, 1],
-  "foto_altura": 0.50,
+  "recorte": [
+    0,
+    0,
+    0.82,
+    1
+  ],
+  "foto_altura": 0.5,
   "cta": "Confira no nosso perfil",
-  "nota": "O atendimento começa no posto de saúde da sua cidade."
+  "nota": "O atendimento começa no posto de saúde da sua cidade.",
+  "cor_destaque": [
+    255,
+    219,
+    147
+  ],
+  "cor_botao": [
+    233,
+    69,
+    34
+  ],
+  "logo2_altura": 190
 }
