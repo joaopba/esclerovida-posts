@@ -54,5 +54,5 @@
 | 2026-11-08 | 19:00 | story | P18 | Pernas pesadas no fim do dia? Eleve as pernas | stories/2026-11-08-1900-pernas-para-cima.jpg | 421112725 |
 | 2026-11-09 | 12:00 | feed | P04 | Quem tem mais chance de ter varizes? | feed/2026-11-09-1200-quem-tem-mais-chance.jpg | 421920154 |
 | 2026-11-09 | 19:00 | story | P30 | Tratamento de varizes na sua cidade | stories/2026-11-09-1900-vantagens-no-municipio.jpg | 422435213 |
-| 2026-11-10 | 12:00 | feed | EXTRA | Começamos em Caculé! | feed/2026-11-10-1200-inicio-cacule.jpg | 423213057 |
-| 2026-11-10 | 12:05 | story-aviso | EXTRA | Começamos em Caculé! (story) | stories/2026-11-10-1205-aviso-inicio-cacule.jpg | 423213087 |
+| 2026-11-10 | 12:00 | feed | EXTRA | Começamos em Caculé! | feed/2026-11-10-1200-inicio-cacule.jpg | 423214141 |
+| 2026-11-10 | 12:05 | story-aviso | EXTRA | Começamos em Caculé! (story) | stories/2026-11-10-1205-aviso-inicio-cacule.jpg | 423214158 |
