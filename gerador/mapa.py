@@ -18,6 +18,8 @@ JSON:
       },
       "cta_titulo": "Procure o posto de saúde da sua cidade",
       "cta_texto": "O agendamento é feito pela Secretaria Municipal de Saúde.",
+      "vista": "estado" | "regiao",               # estado (padrão): Bahia inteira; regiao: zoom nas cidades
+      "mapa_escala": 1.0, "mapa_dx": 0,            # ajustes finos do mapa do estado
       "mapa_altura": 560,                          # altura da área do mapa (px)
       "mapa_largura": 0.70,                        # fração da largura ocupada pelas cidades
       "mapa_dy": 0,                                # desloca o mapa na vertical (px)
@@ -106,37 +108,61 @@ def render(p, saida):
     h_mapa = h_mapa * S if h_mapa else y_bar - z(24) - y_mapa
 
     # ---------- projeção ----------
-    pts = [pt for m in muns if m["nome"] in alvo for a in m["aneis"] for pt in a]
-    lon0, lon1 = min(q[0] for q in pts), max(q[0] for q in pts)
-    lat0, lat1 = min(q[1] for q in pts), max(q[1] for q in pts)
+    estado = p.get("vista", "estado") == "estado"      # "estado": Bahia inteira; "regiao": zoom nas cidades
+    ref = [q for m in muns if estado or m["nome"] in alvo for a in m["aneis"] for q in a]
+    lon0, lon1 = min(q[0] for q in ref), max(q[0] for q in ref)
+    lat0, lat1 = min(q[1] for q in ref), max(q[1] for q in ref)
     latm = math.radians((lat0 + lat1) / 2)
-    k = W * p.get("mapa_largura", 0.70) / ((lon1 - lon0) * math.cos(latm))     # px por grau
+    if estado:
+        k = h_mapa / (lat1 - lat0) * p.get("mapa_escala", 1.0)                 # px por grau
+    else:
+        k = W * p.get("mapa_largura", 0.70) / ((lon1 - lon0) * math.cos(latm))
     cx0 = W / 2 + p.get("mapa_dx", 0) * S
     cy0 = y_mapa + h_mapa / 2 + p.get("mapa_dy", 0) * S
 
     def xy(lon, lat):
         return (cx0 + (lon - (lon0 + lon1) / 2) * math.cos(latm) * k, cy0 - (lat - (lat0 + lat1) / 2) * k)
 
-    # ---------- mapa da região ----------
+    # ---------- mapa ----------
     mapa = R.camada(img)
     dm = ImageDraw.Draw(mapa)
+    sil = Image.new("L", img.size, 0)
+    ds = ImageDraw.Draw(sil)
+    a_fill, a_linha = (30, 120) if estado else (13, 52)
     for m in muns:
         for a in m["aneis"]:
             pol = [xy(*q) for q in a]
             if max(q[0] for q in pol) < -50 or min(q[0] for q in pol) > W + 50:
                 continue
-            dm.polygon(pol, fill=WHITE + (13,))
-            dm.line(pol + [pol[0]], fill=WHITE + (52,), width=S, joint="curve")
-    # some suavemente nas bordas da área do mapa
-    yy = np.arange(H, dtype=np.float32)
-    borda = h_mapa * 0.16
-    mv = np.clip(np.minimum(yy - (y_mapa - borda * 0.4), (y_mapa + h_mapa + borda * 0.4) - yy) / borda, 0, 1)
-    xx = np.arange(W, dtype=np.float32)
-    mh = np.clip(np.minimum(xx, W - xx) / (W * 0.07), 0, 1)
-    masc = (mv[:, None] * mh[None, :]) ** 1.2
-    al = np.asarray(mapa.getchannel("A")).astype(np.float32) * masc
-    mapa.putalpha(Image.fromarray(al.astype(np.uint8), "L"))
-    img = Image.alpha_composite(img, mapa)
+            dm.polygon(pol, fill=WHITE + (a_fill,))
+            dm.line(pol + [pol[0]], fill=WHITE + (a_linha,), width=S, joint="curve")
+            ds.polygon(pol, fill=255)
+    if estado:
+        # contorno forte do estado + sombra, para a Bahia ser reconhecida de imediato
+        sil = sil.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.MinFilter(9))
+        borda = Image.fromarray(np.clip(
+            np.asarray(sil.filter(ImageFilter.MaxFilter(7))).astype(np.int16)
+            - np.asarray(sil.filter(ImageFilter.MinFilter(3))).astype(np.int16), 0, 255).astype(np.uint8), "L")
+        sh = Image.new("RGBA", img.size, (0, 16, 36, 0))
+        sh.putalpha(sil.point(lambda v: v * 0.55))
+        deslocada = R.camada(img)
+        deslocada.alpha_composite(sh, (0, round(z(14))))
+        img = Image.alpha_composite(img, deslocada.filter(ImageFilter.GaussianBlur(z(22))))
+        img = Image.alpha_composite(img, mapa)
+        cont = Image.new("RGBA", img.size, WHITE + (0,))
+        cont.putalpha(borda.filter(ImageFilter.GaussianBlur(S * 0.6)))
+        img = Image.alpha_composite(img, cont)
+    else:
+        # some suavemente nas bordas da área do mapa
+        yy = np.arange(H, dtype=np.float32)
+        borda = h_mapa * 0.16
+        mv = np.clip(np.minimum(yy - (y_mapa - borda * 0.4), (y_mapa + h_mapa + borda * 0.4) - yy) / borda, 0, 1)
+        xx = np.arange(W, dtype=np.float32)
+        mh = np.clip(np.minimum(xx, W - xx) / (W * 0.07), 0, 1)
+        masc = (mv[:, None] * mh[None, :]) ** 1.2
+        al = np.asarray(mapa.getchannel("A")).astype(np.float32) * masc
+        mapa.putalpha(Image.fromarray(al.astype(np.uint8), "L"))
+        img = Image.alpha_composite(img, mapa)
 
     # municípios em destaque (com brilho)
     dest = R.camada(img)
@@ -147,8 +173,9 @@ def render(p, saida):
             for a in m["aneis"]:
                 dd.polygon([xy(*q) for q in a], fill=R.AQUA + (255,))
             centros[m["nome"]] = xy(*centro(m["aneis"]))
-    brilho = dest.filter(ImageFilter.GaussianBlur(z(16)))
-    brilho.putalpha(brilho.getchannel("A").point(lambda v: v * 0.55))
+    brilho = Image.new("RGBA", img.size, R.AQUA + (0,))
+    brilho.putalpha(dest.getchannel("A").filter(ImageFilter.GaussianBlur(z(14)))
+                    .point(lambda v: min(255, v * (1.6 if estado else 0.55))))
     img = Image.alpha_composite(img, brilho)
     img = Image.alpha_composite(img, dest)
     d = ImageDraw.Draw(img)
@@ -156,7 +183,7 @@ def render(p, saida):
         if m["nome"] in alvo:
             for a in m["aneis"]:
                 pol = [xy(*q) for q in a]
-                d.line(pol + [pol[0]], fill=WHITE, width=round(1.5 * S), joint="curve")
+                d.line(pol + [pol[0]], fill=WHITE, width=round((1.0 if estado else 1.5) * S), joint="curve")
 
     # ---------- rótulos ----------
     fl = R.font("Inter-Bold.otf", z(28))
@@ -171,9 +198,15 @@ def render(p, saida):
         ey = box[3] if py > ly else box[1]
         lay = R.camada(img)
         ld = ImageDraw.Draw(lay)
-        ld.line([(px, py), (ex, ey)], fill=WHITE + (235,), width=round(1.5 * S))
-        r = z(6)
-        ld.ellipse([px - r, py - r, px + r, py + r], fill=R.DEEP + (255,), outline=WHITE + (255,), width=S)
+        sx, sy = px, py
+        if estado:          # a linha para um pouco antes do município, para não cobrir o destaque
+            dist = math.hypot(ex - px, ey - py) or 1
+            rec = min(z(15), dist * 0.4)
+            sx, sy = px + (ex - px) / dist * rec, py + (ey - py) / dist * rec
+        ld.line([(sx, sy), (ex, ey)], fill=WHITE + (235,), width=round(1.5 * S))
+        if not estado:      # no mapa do estado o município é pequeno: o ponto esconderia o destaque
+            r = z(6)
+            ld.ellipse([px - r, py - r, px + r, py + r], fill=R.DEEP + (255,), outline=WHITE + (255,), width=S)
         sh = R.camada(img)
         ImageDraw.Draw(sh).rounded_rectangle([box[0], box[1] + z(5), box[2], box[3] + z(5)], radius=bh / 2,
                                              fill=(0, 16, 36, 130))
@@ -185,7 +218,7 @@ def render(p, saida):
 
     # ---------- mapa pequeno da Bahia ----------
     b = p.get("bahia")
-    if b is not False:
+    if b is not False and not estado:
         b = b or {}
         bh_ = b.get("h", 150) * S
         allp = [q for m in muns for a in m["aneis"] for q in a]

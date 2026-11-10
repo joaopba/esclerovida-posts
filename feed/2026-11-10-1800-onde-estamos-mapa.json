@@ -4,35 +4,31 @@
     "Onde",
     "*estamos*"
   ],
-  "subtitulo": "Tratamento de varizes pelo SUS, sem custo e sem internação, nos municípios parceiros da Bahia.",
+  "subtitulo": "Tratamento de varizes pelo SUS, sem custo e sem internação.",
   "cidades": {
     "Caculé": {
-      "dx": 0,
-      "dy": -70
+      "dx": -150,
+      "dy": -10
     },
     "Bom Jesus da Serra": {
-      "dx": -40,
-      "dy": -75
+      "dx": -60,
+      "dy": -100
     },
     "Planalto": {
-      "dx": 165,
+      "dx": 235,
       "dy": -45
     },
     "Barra do Choça": {
-      "dx": -190,
-      "dy": 40
+      "dx": -150,
+      "dy": 100
     },
     "Itororó": {
-      "dx": 30,
-      "dy": 75
+      "dx": 200,
+      "dy": 45
     }
   },
   "cta_titulo": "Procure o posto de saúde da sua cidade",
   "cta_texto": "O agendamento é feito pela Secretaria Municipal de Saúde.",
-  "mapa_largura": 0.7,
-  "bahia": {
-    "x": 84,
-    "y": -205,
-    "h": 135
-  }
+  "vista": "estado",
+  "mapa_dx": -40
 }
