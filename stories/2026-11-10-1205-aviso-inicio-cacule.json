@@ -1,11 +1,10 @@
 {
   "formato": "story",
-  "kicker": "NOVO POST",
   "titulo": [
     "Começamos em",
     "*Caculé!*"
   ],
-  "subtitulo": "Tratamento de varizes pelo SUS, sem custo. Confira o post completo no nosso perfil.",
+  "subtitulo": "Tratamento de varizes pelo SUS, sem custo e sem internação.",
   "recorte": [
     0,
     0,
@@ -13,7 +12,7 @@
     1
   ],
   "foto_altura": 0.46,
-  "cta": "Confira no nosso perfil",
+  "cta": "Saiba mais no nosso perfil",
   "nota": "O atendimento começa no posto de saúde da sua cidade.",
   "cor_destaque": [
     255,
