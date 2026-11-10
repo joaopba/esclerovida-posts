@@ -16,6 +16,7 @@ JSON:
       "itens": ["Sem custo", "Sem internação", "Sessões rápidas"],     # até 3, curtos
       "cta_titulo": "Procure o posto de saúde da sua cidade",
       "cta_texto": "O agendamento é feito pela Secretaria Municipal de Saúde.",
+      "transicao": "degrade" | "folha",     # degrade (padrão): a foto se desfaz no azul; folha: painel arredondado
       "rotulo": "EM PARCERIA COM",          # texto acima da logo do parceiro
       "recorte": [x0, y0, x1, y1],          # área da foto a usar (0 a 1)
       "cor_destaque": [r, g, b],            # cor do nome da cidade (ex.: cor do município)
@@ -39,7 +40,7 @@ WHITE = (255, 255, 255)
 NAVY = np.array([5, 28, 58], dtype=np.float32)
 
 
-def preparar_foto(caminho, recorte, W, hp):
+def preparar_foto(caminho, recorte, W, hp, base=0.60):
     f = Image.open(caminho).convert("RGB")
     x0, y0, x1, y1 = recorte
     f = f.crop((round(x0 * f.width), round(y0 * f.height), round(x1 * f.width), round(y1 * f.height)))
@@ -53,8 +54,7 @@ def preparar_foto(caminho, recorte, W, hp):
     a = a * 0.90 + NAVY * 0.10                       # leve tom azul, para unir à marca
     yy = np.linspace(0, 1, hp, dtype=np.float32)[:, None, None]
     topo = np.clip(1 - yy / 0.36, 0, 1) ** 1.4 * 0.66   # escurece o topo (logo legível)
-    base = np.clip((yy - 0.50) / 0.50, 0, 1) ** 1.3 * 0.60
-    m = np.maximum(topo, base)
+    m = np.maximum(topo, np.clip((yy - 0.50) / 0.50, 0, 1) ** 1.3 * base)
     a = a * (1 - m) + NAVY * m
     return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8), "RGB")
 
@@ -137,19 +137,32 @@ def render(p, foto, logo2, saida):
     ys = fim - sum(blocos)                     # topo da folha
     Rr = z(64)
 
-    # ---------- foto + folha ----------
-    hp = round(ys + Rr + z(30))
-    img = Image.new("RGBA", (W, H), tuple(int(v) for v in NAVY) + (255,))
-    img.paste(preparar_foto(foto, p.get("recorte", [0, 0, 1, 1]), W, hp), (0, 0))
-    sh = R.camada(img)
-    ImageDraw.Draw(sh).rounded_rectangle([-8, ys - z(6), W + 8, H + Rr], radius=Rr, fill=(0, 12, 30, 170))
-    img = Image.alpha_composite(img, sh.filter(ImageFilter.GaussianBlur(z(30))))
-    mask = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(mask).rounded_rectangle([0, ys, W, H + Rr], radius=Rr, fill=255)
-    img.paste(gradiente(W, H, ys), (0, 0), mask)
-    lay = R.camada(img)
-    ImageDraw.Draw(lay).rounded_rectangle([-8, ys, W + 8, H + Rr], radius=Rr, outline=WHITE + (46,), width=2 * S)
-    img = Image.alpha_composite(img, lay)
+    # ---------- foto + fundo ----------
+    if p.get("transicao", "degrade") == "degrade":
+        # a foto se desfaz em degradê no fundo azul
+        hp = round(ys + z(96))
+        img = gradiente(W, H, ys * 0.80).convert("RGBA")
+        foto_im = preparar_foto(foto, p.get("recorte", [0, 0, 1, 1]), W, hp, base=0.0).convert("RGBA")
+        yy = np.linspace(0, 1, hp, dtype=np.float32)
+        fade = 0.42
+        al = np.clip((1 - yy) / fade, 0, 1) ** 1.25
+        foto_im.putalpha(Image.fromarray((np.repeat(al[:, None], W, 1) * 255).astype(np.uint8), "L"))
+        img.alpha_composite(foto_im)
+    else:
+        # "folha": painel de cantos arredondados subindo sobre a foto
+        hp = round(ys + Rr + z(30))
+        img = Image.new("RGBA", (W, H), tuple(int(v) for v in NAVY) + (255,))
+        img.paste(preparar_foto(foto, p.get("recorte", [0, 0, 1, 1]), W, hp), (0, 0))
+        sh = R.camada(img)
+        ImageDraw.Draw(sh).rounded_rectangle([-8, ys - z(6), W + 8, H + Rr], radius=Rr, fill=(0, 12, 30, 170))
+        img = Image.alpha_composite(img, sh.filter(ImageFilter.GaussianBlur(z(30))))
+        mask = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, ys, W, H + Rr], radius=Rr, fill=255)
+        img.paste(gradiente(W, H, ys), (0, 0), mask)
+        lay = R.camada(img)
+        ImageDraw.Draw(lay).rounded_rectangle([-8, ys, W + 8, H + Rr], radius=Rr, outline=WHITE + (46,),
+                                              width=2 * S)
+        img = Image.alpha_composite(img, lay)
 
     # ---------- cabeçalho ----------
     alpha = R.logo_rgba()
