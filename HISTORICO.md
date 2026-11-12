@@ -60,3 +60,4 @@
 | 2026-11-10 | 19:00 | story | P08 | Onde estamos (mapa) | stories/2026-11-10-1900-onde-estamos-mapa.jpg | 423231696 |
 | 2026-11-11 | 12:00 | feed | P10 | Inchaço nas pernas no fim do dia? | feed/2026-11-11-1200-inchaco-nas-pernas.jpg | 424513251 |
 | 2026-11-12 | 12:00 | feed | P12 | Muitas horas na cadeira? | feed/2026-11-12-1200-horas-sentado.jpg | 425776281 |
+| 2026-11-12 | 19:00 | story | P26 | Seus pais ou avós têm varizes? | stories/2026-11-12-1900-pais-e-avos.jpg | 426258835 |
