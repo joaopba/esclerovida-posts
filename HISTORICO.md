@@ -61,3 +61,4 @@
 | 2026-11-11 | 12:00 | feed | P10 | Inchaço nas pernas no fim do dia? | feed/2026-11-11-1200-inchaco-nas-pernas.jpg | 424513251 |
 | 2026-11-12 | 12:00 | feed | P12 | Muitas horas na cadeira? | feed/2026-11-12-1200-horas-sentado.jpg | 425776281 |
 | 2026-11-12 | 19:00 | story | P26 | Seus pais ou avós têm varizes? | stories/2026-11-12-1900-pais-e-avos.jpg | 426258835 |
+| 2026-11-13 | 19:00 | story | P25 | Vai usar meias de compressão? Peça orientação | stories/2026-11-13-1900-meias-orientacao.jpg | 427494597 |
