@@ -1,0 +1,16 @@
+{
+  "formato": "story",
+  "layout": "lista",
+  "kicker": "FIQUE ATENTO",
+  "titulo": ["Quando as pernas", "*dão o alerta*"],
+  "subtitulo": "Reconhecer cedo muda o tratamento.",
+  "itens": [
+    "Câimbras à noite",
+    "Pernas pesadas e cansadas",
+    "Inchaço no fim do dia",
+    "Manchas escuras e coceira",
+    "Feridas que não cicatrizam"
+  ],
+  "cta": "Procure o posto de saúde da sua cidade",
+  "nota": "O agendamento é feito pela Secretaria Municipal de Saúde."
+}
