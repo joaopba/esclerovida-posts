@@ -1,0 +1,10 @@
+{
+  "formato": "feed",
+  "layout": "mito_verdade",
+  "kicker": "MITO OU VERDADE?",
+  "titulo": ["Varizes não", "fazem mal", "*à saúde?*"],
+  "mito": "Varizes são só um detalhe nas pernas e não trazem problemas.",
+  "verdade": "Varizes podem causar dor, peso e inchaço e, sem acompanhamento, levar a manchas e feridas na pele. O tratamento pelo SUS tem indicação clínica.",
+  "cta": "Você acreditava nisso? Comente",
+  "nota": "O agendamento é feito pela Secretaria Municipal de Saúde."
+}
