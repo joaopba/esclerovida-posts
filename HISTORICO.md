@@ -63,3 +63,4 @@
 | 2026-11-12 | 19:00 | story | P26 | Seus pais ou avós têm varizes? | stories/2026-11-12-1900-pais-e-avos.jpg | 426258835 |
 | 2026-11-13 | 19:00 | story | P25 | Vai usar meias de compressão? Peça orientação | stories/2026-11-13-1900-meias-orientacao.jpg | 427494597 |
 | 2026-11-14 | 19:00 | story | P02 | Quando as pernas dão o alerta | stories/2026-11-14-1900-pernas-avisam.jpg | 428375255 |
+| 2026-11-15 | 12:00 | feed | P05 | Varizes não fazem mal à saúde? | feed/2026-11-15-1200-varizes-fazem-mal.jpg | 428948590 |
