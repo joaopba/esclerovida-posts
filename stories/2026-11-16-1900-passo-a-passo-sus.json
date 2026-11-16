@@ -1,0 +1,15 @@
+{
+  "formato": "story",
+  "layout": "passos",
+  "kicker": "PASSO A PASSO",
+  "titulo": ["Como ser", "*atendido?*"],
+  "subtitulo": "Tratamento de varizes pelo SUS",
+  "itens": [
+    "Vá ao posto de saúde da sua cidade",
+    "A unidade faz o encaminhamento",
+    "A Secretaria de Saúde agenda",
+    "A EscleroVida atende na sua cidade"
+  ],
+  "cta": "Procure o posto de saúde da sua cidade",
+  "nota": "Atendimento pelo SUS, sem custo, nos municípios parceiros."
+}
