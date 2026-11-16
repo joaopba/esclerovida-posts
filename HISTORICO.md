@@ -65,3 +65,4 @@
 | 2026-11-14 | 19:00 | story | P02 | Quando as pernas dão o alerta | stories/2026-11-14-1900-pernas-avisam.jpg | 428375255 |
 | 2026-11-15 | 12:00 | feed | P05 | Varizes não fazem mal à saúde? | feed/2026-11-15-1200-varizes-fazem-mal.jpg | 428948590 |
 | 2026-11-15 | 19:00 | story | P28 | Pernas inchadas no calor? | stories/2026-11-15-1900-pernas-no-calor.jpg | 429318377 |
+| 2026-11-16 | 12:00 | feed | P13 | Ferida na perna que demora a cicatrizar? | feed/2026-11-16-1200-ferida-demora-cicatrizar.jpg | 430166118 |
