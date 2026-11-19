@@ -67,3 +67,4 @@
 | 2026-11-15 | 19:00 | story | P28 | Pernas inchadas no calor? | stories/2026-11-15-1900-pernas-no-calor.jpg | 429318377 |
 | 2026-11-16 | 12:00 | feed | P13 | Ferida na perna que demora a cicatrizar? | feed/2026-11-16-1200-ferida-demora-cicatrizar.jpg | 430166118 |
 | 2026-11-16 | 19:00 | story | P03 | Como ser atendido? | stories/2026-11-16-1900-passo-a-passo-sus.jpg | 430702620 |
+| 2026-11-19 | 12:00 | feed | P14 | Homem também tem varizes? | feed/2026-11-19-1200-homens-tem-varizes.jpg | 434309581 |
