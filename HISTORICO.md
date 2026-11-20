@@ -69,3 +69,4 @@
 | 2026-11-16 | 19:00 | story | P03 | Como ser atendido? | stories/2026-11-16-1900-passo-a-passo-sus.jpg | 430702620 |
 | 2026-11-19 | 12:00 | feed | P14 | Homem também tem varizes? | feed/2026-11-19-1200-homens-tem-varizes.jpg | 434309581 |
 | 2026-11-19 | 19:00 | story | P06 | Sem internação, na sua cidade | stories/2026-11-19-1900-sem-sair-da-cidade.jpg | 434805196 |
+| 2026-11-20 | 12:00 | feed | P15 | Sua prefeitura pode ser parceira | feed/2026-11-20-1200-parceria-prefeituras.jpg | 435659805 |
