@@ -1,0 +1,15 @@
+{
+  "formato": "feed",
+  "layout": "lista",
+  "kicker": "PARA GESTORES MUNICIPAIS",
+  "titulo": ["Sua prefeitura", "*pode ser parceira*"],
+  "subtitulo": "Tratamento de varizes pelo SUS no município.",
+  "itens": [
+    "Parceria com a prefeitura",
+    "Equipe e material próprios",
+    "Atendimento no próprio município",
+    "Relatório de produção à gestão"
+  ],
+  "cta": "Saiba mais em esclerovida.com.br",
+  "nota": "Atendimento pelo SUS, sem custo, nos municípios parceiros."
+}
